@@ -1,12 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 
-
 // Desafio Super Trunfo - Países
 // Tema 2 - Comparação das Cartas
 // Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
 // Siga os comentários para implementar cada parte do desafio.
-
 
 // Estrutura das cartas
 struct Carta {
@@ -32,7 +30,7 @@ int main() {
 
     printf("\n");
 
-    // Cadastro da Primeira Carta
+    // Cadastro da Carta1
     printf("--- Cadastro da Primeira Carta ---\n");
     printf("Estado (A-H): ");
     scanf(" %c", &carta1.estado);
@@ -49,7 +47,7 @@ int main() {
     printf("Numero de pontos turisticos: ");
     scanf(" %d", &carta1.pontos_turisticos);
 
-    // Calculos para a Carta 1
+    // Calculos para a Carta1
     carta1.densidade_p = (carta1.area > 0) ? (float)carta1.populacao / carta1.area : 0;
     carta1.pibpc = (carta1.populacao > 0) ? carta1.pib / (float)carta1.populacao : 0;
     carta1.inverso_densidade = (carta1.densidade_p > 0) ? 1.0f / carta1.densidade_p : 0;
@@ -58,7 +56,7 @@ int main() {
     // Imprimindo os valores definidos da carta1
     printf("Carta 1\n Estado: %c\n Código: %c%s\n Nome da cidade: %s\n População: %lu\n Densidade Populacional: %.2f\n Área: %.2fKm2\n PIB: %.2fBilhões de reais\n PIB per Capita: %.2f\nPontos turísticos: %d", carta1.estado, carta1.estado, carta1.codigo, carta1.nome_cidade, carta1.populacao, carta1.densidade_p, carta1.area, carta1.pib, carta1.pibpc, carta1.pontos_turisticos);
 
-    // Cadastro da Segunda Carta
+    // Cadastro da Carta2
     printf("\n--- Cadastro da Segunda Carta ---\n");
     printf("Estado (A-H): ");
     scanf(" %c", &carta2.estado);
@@ -75,7 +73,7 @@ int main() {
     printf("Numero de pontos turisticos: ");
     scanf(" %d", &carta2.pontos_turisticos);
 
-    // Calculos para a Carta 2
+    // Calculos para a Carta2
     carta2.densidade_p = (carta2.area > 0) ? (float)carta2.populacao / carta2.area : 0;
     carta2.pibpc = (carta2.populacao > 0) ? carta2.pib / (float)carta2.populacao : 0;
     carta2.inverso_densidade = (carta2.densidade_p > 0) ? 1.0f / carta2.densidade_p : 0;
@@ -109,7 +107,7 @@ int main() {
         case 7: nome_atributo1 = "Super Poder"; valor1_c1 = carta1.super_poder; valor1_c2 = carta2.super_poder; break;
     }
 
-    // Escolha do Segundo Atributo (menu dinâmico)
+    // Escolha do Segundo Atributo
     do {
         printf("\nEscolha o SEGUNDO atributo para a batalha:\n");
         // Menu dinamico para nao mostrar a opcao ja escolhida
