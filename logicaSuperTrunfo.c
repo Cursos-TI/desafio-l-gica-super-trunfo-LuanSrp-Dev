@@ -96,7 +96,7 @@ int main() {
         }
     } while (escolha1 < 1 || escolha1 > 7);
 
-    // Atribuicao de valores para o primeiro atributo usando switch
+    // Atribuicao de valores para o primeiro atributo
     switch (escolha1) {
         case 1: nome_atributo1 = "Populacao"; valor1_c1 = (float)carta1.populacao; valor1_c2 = (float)carta2.populacao; break;
         case 2: nome_atributo1 = "Area"; valor1_c1 = carta1.area; valor1_c2 = carta2.area; break;
@@ -127,7 +127,7 @@ int main() {
         }
     } while (escolha2 < 1 || escolha2 > 7 || escolha1 == escolha2);
     
-    // Atribuicao de valores para o segundo atributo usando switch
+    // Atribuicao de valores para o segundo atributo
     switch (escolha2) {
         case 1: nome_atributo2 = "Populacao"; valor2_c1 = (float)carta1.populacao; valor2_c2 = (float)carta2.populacao; break;
         case 2: nome_atributo2 = "Area"; valor2_c1 = carta1.area; valor2_c2 = carta2.area; break;
